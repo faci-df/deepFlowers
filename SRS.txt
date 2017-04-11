@@ -18,8 +18,6 @@ Use Case Diagram, Sequence Diagram은 UML(Unified Modeling Language)을 이해�
 
 1.4. 프로젝트의 목표
 
-<프로젝트의 목표. 비즈니스 전략/경영자 수준의 요약. 30초 엘리베이터 스피치 For CEO 수준. 일반 경영자가 이해할 수 있도록 CEO에게 보고하는 느낌. 미사여구를 잘 붙여야 함. 혹하게끔. 따라서 비즈니스 하는 사람(영업, 마케팅)이 적는게 좋다. 하는 것과 안하는 것을 잘 적는다. 보통 한 페이지 정도> 
-
 우리 주변에는 많은 꽃이 있다. 꽃을 좋아하는 사람은 많지만 정작 꽃이름에 대해 잘 알고 있는 이는 드물다. 
 수많은 꽃이름을 모두 외우는 것 또한 불가능하다. 거리에 핀 수많은 들꽃을 포함해서...
 아이와 함께 길을 걷다가 아이가 궁금해하는 꽃이름을 가르켜 주거나 등산을 하다 마주하는 꽃이름을 기억하고 싶다.
@@ -336,89 +334,79 @@ RAM(Random Access Memory) : 3GB
 
 ## 6.기능 이외 요구사항
 
-<예측해서 안전한 선을 이야기한다. 검증이 불가능한 부분>
-
 6.1.안전성 요구사항
-
-<말도 안되는 장애상황에 대한 안정성, 갑자기 전원코드를 뽀을 경우 etc>
+	N/A
 
 6.2.보안 요구사항
 
 <데이터 암호화, 사용자 인증, 권한정책, 암호화 방식…>
+	User Password 등 개인정보에 민감한 데이터 저장이 필요한 경우 복호화가 불가능한 방식으로 암호화 하고 (예)SHA-512
+	Password 재설정 기능만 제공한다. (비번 재설정은 Random 키로, 사용자에게 이메일로 알림)
 
 6.3.소프트웨어 시스템 특성
 
 6.3.1.가용성
+	App이 비정상적인 예외로 오류가 발생하더라도 현재 단말기상황에 대한 Audit Data (with Parameters)는 반드시 남기도록 한다.
+	User에게 팝업메시지로 관리자 이메일주소를 보여주고 오류레포트 전송 버튼을 표시한다.
 
 6.3.2.유지보수성
+	Program 구현시 Code Complexibility(코드 복잡도)를 최대한 제거하고 AMAP(As Much As Possible)으로
+	잘게 쪼개서 각 Method를 작성해야 함. 불필요한 주석은 달지 않는다. Method Name으로 동작을 가늠할 수 있게 Method Naming에 신경을 쓴다.
 
 6.3.3.이식성(Portablity)
+	향후 iOS Version App 개발시 최대한 소스 재활용이 가능하게끔 Android 기술 종속적이지 않게 코딩해야 함.
 
 6.3.4.신뢰성
-
-<Banking, 항공우주분야, 신뢰성 이슈가 큰 경우>
+	꽃이름 정확도가 50% 이하인 경우 꽃이름 검색대상에서 제외하고 Not Available 문구 표시
 
 6.3.5.나머지 특성(Remaining Attributes)
-
-* Correctness
-* Efficiency
-* Flexibility
-* Interoperatability
-* Reusability
-* Testability
-* Usability
+	N/A
 
 6.4.데이터베이스 요구사항
-
-<RDB가 아니라 데이터 포맷등 데이터에 대한 정의, 파일DB, 중요파일 리스트 etc>
-
-* Types of Information used by various functions
-* Frequency of use
-* Acessing capabilities
-* Data entities and their relationships
-* Integrity constraints
-* Data retention requirements
+	Mongo DB in AWS (Audit Usage, Scalable with Lambda Function)
+	SQLite for Local DB (Android Machine)
 
 6.5.비즈니스 규칙
 
 6.6.설계와 구현 제한사항
 
 6.6.1.표준준수
+	IDE(개발툴은 Android Studio 최신 버전으로 제한) 
 
 6.6.2.기타제한사항
+	N/A
 
 6.7.메모리 제한사항
-
-<Firmware, 어플리케이션 크기>
+	N/A
 
 6.8.운영 요구사항
-
-<Daily Reboot여부, 백업필요여부, 중간에 사람이 개입해야 하는지 여부>
+APK File 배포 후 직전 APK 파일을 GitHub에 보관한다. (파일명 규칙: 접미사 년월일시분초)
+Audit Log를 주기적으로 확인하고 오류/예외사항 발생시 버그 수정 후  (배포 기한: 하루 이내 (오류 수정 기한: 즉시, GitHub Source Commit))
 
 6.9.사이트 적용 요구사항
+	N/A
 
 6.10다국어 지원 요구사항
-
-<Locale은 메시지만 지원하는지? 그나라의 통화단위도 지원하는지? 문화/법규도 지원하는지?>
+	한국어/영어만 지원함.
 
 6.11.유니코드 지원
+	UTF8 Only
 
 6.12.64비트 지원
+	N/A
 
 6.13.제품 인증
 
-<외부인증을 받아야 하는지? 어떻게 받는지? 언제 어떤 방법으로 진행하며 무엇을 준비해야 하는지? 그 비용은? 마케팅과 협의 요망. 예) MS 로고 인증, Good Software 인증…>
+	Google Play Store 인증 필요.
 
 6.14.필드 테스트
 
-<필드 테스트가 필요한지? 계획은? 마케팅과 협의하여 기술>
+	Beta Version 으로  Google Play Store 를 통해 배포하여 주변 지인들에게 베타테스트 요청해야 함.
 
 6.15. 기타 요구사항
 
 
 ## 7.기능 요구사항
-
-<Function Hierarchy 방식으로 구현할 수 있을 정도로만 적는다. 딱히 가이드 라인은 없다. IEEE에도… 2장에서 설명되었던 제품 주요기능을 상세하게 분류하고 설명한다. 각 기능을 구분가능하도록 개별번호를 붙인다. WBS의 각 기능항목은 작업량이 1~2일 정도로 산정가능하도록 세분하여 작성한다.>
 
 Use Case Diagram
 User Interface Design 은 별도 문서로 작성함. 
