@@ -80,7 +80,7 @@ N/A
 
 2.1.제품 조망
 
-외부파일 참조 - 2.1.1_overview_uml.mdj (Star UML Format)
+외부파일 참조 - 2.1.1_overview_uml.png
 
 
 2.2.전체 시스템
