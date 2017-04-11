@@ -237,13 +237,19 @@ Git Hub
 
 빌드 머신 등의 빌드환경을 어떻게 구축/운영할지 Build/Release 팀과 협의하여 기술. 빌드 기계, 디렉터리, 특수하게 요구되는 빌드방법등을 기술.
 
-텐서플로우 안드로이드를 개발하기 위해선 구글에서 개발한 바젤(Bazel)을 사용한다.
-
-1.	바젤 (https://bazel.build/)
-2.	Android Studio
-3.	Oracle JDK
-4.	TensorFlow
-
+   텐서플로우 안드로이드를 개발하기 위해선 구글에서 개발한 바젤(Bazel)을 사용한다.
+   OS : Linux
+   [CPU 연산만 수행하고자 하는 경우]Ubuntu -> Anaconda2 0 -> Bazel -> Tensorflow -> 파이참
+   [GPU 연산도 수행하고자 하는 경우(nvidia)] Ubuntu -> Anaconda2 0 -> Bazel -> CUDA, Cudnn -> Tensorflow -> 파이참
+   
+   3.6.2.1. Linux(우분투) 설치 (듀얼 부팅 / 클라우드)버전 : Ubuntu 16.04.2 LTS
+   3.6.2.2. Anaconda2 설치python2.7 버전 다운로드
+   3.6.2.3. Bazel 설치 (자바 8버전 먼저 설치하여야 함)
+            자바 설치 
+            바젤 설치
+   3.6.2.4. 텐서플로우 설치
+   3.6.2.5. 파이참 설치 
+   3.6.2.6. Android Studio 설치
 
 3.7.버그 트래킹
 
