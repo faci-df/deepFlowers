@@ -30,8 +30,8 @@ N/A
 1.6. 정의 및 약어
 
 	1.6.1. 텐서플로우(TensorFlow) : 기계 학습(Machine learning)과 딥러닝(Deep learning)을 위해 구글에서 만든 오픈소스 라이브러리.
-	1.6.2. 기트허브 (GitHub) : 팀 프로젝트 소스 관리 시스템
-	1.6.3. 슬랙 (Slack) : 이슈관리 시스템
+	1.6.2. 기트허브 (GitHub) : 팀 프로젝트 소스 관리/이슈관리 시스템
+	1.6.3. 슬랙 (Slack) : 협업 메신저	
 
 1.7. 프로젝트 산출물
 
@@ -47,11 +47,11 @@ N/A
 
 1.9. 산출물 명(가칭) 및 버전
 
-1.9.1.	AI 개발 프로세스 확립
-1.9.2.	이슈트래커(Issue Tracker) 산출물
-1.9.3.	앱(플레이스토어, 앱스토어 런칭)
-1.9.4.	스펙 문서
-1.9.5.	소스 코드
+	1.9.1.	AI 개발 프로세스 확립
+	1.9.2.	이슈트래커(Issue Tracker) 산출물
+	1.9.3.	앱(플레이스토어, 앱스토어 런칭)
+	1.9.4.	스펙 문서
+	1.9.5.	소스 코드
 
 
 1.10. Scope
@@ -105,16 +105,16 @@ N/A
 	노인, 어린이 계층도 포함하는만큼 버튼 아이콘은 크게 만들고 Text 없이 아이콘 이미지로 동작을 추측할 수 있게 디자인 해야 한다.
 
 	프로그램 개발자에게는 Hidden Option으로 Admin 기능을 제공한다.
-	예를 들어 애플리케이션이 꽃이름을 못 찾을 경우 해당 꽃이름을 수동으로 입력하여 서버에 저장한 후 Tensorflow에 학습시킨다.
+	예를 들어 애플리케이션이 꽃이름을 못 찾을 경우 해당 꽃이름을 수동으로 입력하여 서버에 저장한 후 학습시킨다(Deep Learning).
 
 
 2.6. 가정과 종속관계
 
-	2.6.1. 개발도구: Android Studio 최신버전, Tensorflow GPU 최신 버전
+	2.6.1. 개발도구: Android Studio 최신버전, Deep Learning Tool
 	2.6.2. 베타버전 출시일: 2017년 6월
 	2.6.3. 정식버전 출시일: 2017년 8월
-	2.6.4. 협력패키지 종속송: Tensorflow
-	2.6.5. 프로젝트 수행 전제조건: Tensorflow Flower 기술 검토 (실현가능성, 테스트용 이미지 데이터 입력방법)
+	2.6.4. 협력패키지 종속성: Deep Learning Tool
+	2.6.5. 프로젝트 수행 전제조건: Deep Learning 기술 검토 (실현가능성, 테스트용 이미지 데이터 입력방법)
 	2.6.6. 프로젝트 지연요소: 연구회 참여자들의 개인시간, 참여의지/열정
 	2.6.7. Project Risk: 연구회원 탈퇴
 	2.6.8. 통제불가능한 외부요소: 동종 단독 App의 존재로 Project 구현의미가 없어지는 경우 Project 취소.
@@ -133,38 +133,26 @@ N/A
 
 3.1.운영 환경
 
-<프로젝트 산출물을 설치하고 운영하기 위한 하드웨어 환경정보와 소프트웨어 환경정보(OS 및 사전에 설치되어야 할 소프트웨어>
-
 3.1.1하드웨어 환경
-Desktop PC
-Mobile Phone(Android 5.0)
-
+PC
+Android Device
 
 3.1.2소프트웨어 환경
-Mobile : Android 5.0 
-
-3.1.2.1운영체제 환경
-3.1.2.2운영체제외 소프트웨어 환경
-
-<MS Internet Explorer 필수지원 …>
+Google Android 5.0 이상
 
 3.2.제품 설치 및 설정
 
-<본 프로젝트 산출물 설치과정에서의 요구사항을 기술. 제품을 실행하는데 필요한 기본 설정 요소 및 방법에 대한 요구사항을 기술. DB 설치방법 포함, 관련 Tool 설치방법. 나중에 매뉴얼 설치 가이드에 사용.>
-
-안드로이드 5.0이상 모바일에서만 운용가능하다.
+Google Play Console을 통해 App 배포
+APK File을 업로드
+APK File Build 하기 전 Android Studio에서 버전 숫자 변경
 
 3.3.배포환경
 
 3.3.1.마스터 구성
 
-<프로젝트 산출물 마스터를 어떤 형태로 구성할 것인지를 기술. 외적인 구성형태 및 마스터 내부 구성 형태를 미리 고려. 예를 들어 CD로 구성할지 여부… 파일명까지 일일이 정의)
-
 APK파일 : DeepFlowers.apk
 
 3.3.2.배포방법
-
-<CD로 전달할지, 웹에서 다운로드 할지…>
 
 3.3.2.1.	Android Play Store 로 배포
 3.3.2.2.	DeepFlowers.apk 파일 직접 설치
@@ -172,24 +160,17 @@ APK파일 : DeepFlowers.apk
 
 3.3.3.패치와 업데이트 방법
 
-<배포 이후 업데이트 방법, 자동패치? 수동패치?>
-
 3.3.3.1.	Android Play Store 로 자동 설치 배포
 3.3.3.2.	DeepFlowers.apk 파일 직접 설치
 
-
-
 3.4.개발 환경
-
-<프로젝트 산출물을 개발하기 위한 하드웨어 환경정보와 소프트웨어 환경정보를 기술. >
 
 3.4.1.하드웨어 환경
 
-3.4.1.1.	Desktop PC 
+3.4.1.1.	PC (Windows, Mac) 
 3.4.1.2.	Ubuntu 16.04 64bit Desktop
 3.4.1.3.	GPU 없음( 필요로 할 수 도 있음)
 3.4.1.4.	Android 5.0(API 21) 이상
-
 
 
 3.4.2.소프트웨어 환경
@@ -208,32 +189,36 @@ CUDNN
 Android Studio
 Android SDK / NDK
 
+- AWS, Azure Cloud API
+
 
 3.5.테스트 환경
 
 3.5.1.하드웨어 환경
 
+Android Device ( Example: Samsung Galaxy S7)
+
 3.5.2.소프트웨어 환경
+
+Android Studio Emulator
 
 3.6.형상관리
 
-< 디렉토리 구조, 공통모듈위치, 소스코드 관리계획, 소프트웨어 개발계획서>
-
 3.6.1.산출물 위치
 
-<형상관리 서버상에 본 프로젝트 소스 위치 및 문서위치를 명시>
-
-Git
-Git Hub
-
+https://github.com/faci-df/deepFlowers
 
 3.6.1.1.소스코드 위치
 
+https://github.com/faci-df/deepFlowers.git
+
 3.6.1.2.문서 위치
 
-3.6.2.빌드 환경
+https://github.com/faci-df/deepFlowers.git
 
-빌드 머신 등의 빌드환경을 어떻게 구축/운영할지 Build/Release 팀과 협의하여 기술. 빌드 기계, 디렉터리, 특수하게 요구되는 빌드방법등을 기술.
+SRS.txt etc
+
+3.6.2.빌드 환경(Tensorflow Case)
 
    텐서플로우 안드로이드를 개발하기 위해선 구글에서 개발한 바젤(Bazel)을 사용한다.
    OS : Linux
@@ -251,42 +236,40 @@ Git Hub
 
 3.7.버그 트래킹
 
-<버그트래킹 시스템에 사용될 제품이름을 명시>
+https://github.com/faci-df/deepFlowers/issues
 
 3.8.기타 환경
-
+N/A
 
 ## 4.외부 인터페이스 요구사항
 
-<창의적인 부분. 정답이 없다. 컴포넌트간 인터페이스. 쪼개고 깊이 들어갈 수 있다. 효율적인 컴포넌트 쪼개기(피드백, 수차례 반복후 최적화), Function call etc.>
-
 4.1.시스템 인터페이스
-
-<Depth가 내려갈수록 몇백페이지가 나올 수도 있다. 문서가 크니 별도 문서로 뺄 수도 있다.>
+Google Android vs Deep Learning Engine
+(기술 검토 중)
 
 4.2.사용자 인터페이스
-
-<스토리 보드 등 기존방법. 빠짐없이 모든 화면 기술. 별도 문서로 만들어 링크한다(문서가 클수록). Why를 적기 위해 이야기한다. 타협과정을 가감없이 서술해도 된다.(모호한 경우). 핵심적인 내용만 잡아서 적는다.>
+Android Device Touch Input
+Android Phone Camera
 
 4.3.하드웨어 인터페이스
-<>
+N/A
 
 4.4.소프트웨어 인터페이스
-<>
+JAVA vs Python Codes (For Example: Google TensorFlow)
+API Function call for LogIn between Local Device and Other Portal Sites Login Info (Facebook, Google, Kakao)
+Data Interfaces by Local SQLite DB
 
 4.5.통신 인터페이스
-<>
+AWS Lambda Function Call for App Logging 
 
 4.6.기타 인터페이스
-<>
+N/A
 
 ## 5.성능 요구사항
 
-<성능목표를 가능한 수치화하여 도출한다. 이슈가 될만한 핵심적인 기능의 성능 속성을 설명한다. >
-
 <스마트폰 기본사항>
 
-삼성 갤럭시 S6 엣지(Samsung Galaxy S6 Edge 이상 버전
+삼성 갤럭시 S6 엣지(Samsung Galaxy S6 Edge 이상 버전)
 운영체제/소프트웨어 : 안드로이드 6.0.1 마시멜로 이상 버전
 모델명 : SM-G925S (Korea SKT) 이후 버전
 AP(Application Processor : 중앙처리장치) : 삼성전자 엑시노트 7 옥타
@@ -300,36 +283,34 @@ RAM(Random Access Memory) : 3GB
 저장용량 : 64GB (UFS : Unix File System)
 
 5.1.작업처리량
-
-<일정 시간내 수행한 작업량>
-
-5.1.1	Deep Flowers 어플리케이션은 스마트폰에서 단독 실행을 했을 경우, 꽃검색 요청에 대한 처리를 3초 이내에 해야 한다.
-5.1.2	Deep Flowers 어플리케이션은 스마트폰에서 3개이상의 어플리케이션이 실행되고 있는 경우에도 꽃검색 요청에 대한 처리를 3초 이내에 해야한다.
+	5.1.1. Server Dependent 환경에서 동시접속자 50명 이하 접속을 유지한다.
+	       그 이상 접속하는 경우 '동시접속자 초과' 메시지를 띄우며 대기한다.
+	       향후 Cloud Load Balancing 처리를 통해 접속자 초과시 Auto Scaling 기능 On
+	5.1.2. Server Dependent 환경에서는 무료 Cloud Service Data Traffic을 초과하지 않는 수준에서
+	       Image File Upload Size를 제한한다. (예, 3MB 이하)
 
 5.2.동시 세션
-
-<동시 처리수>
+	No Limitation. (상용 배포 전)
+	Test 기간에는 50 Sessions 이하
 
 5.3.대응시간
-
-<처리시간 >
+	5.3.1	검색 요청에 대한 처리를 3초 이내에 해야 한다.
 
 5.4.성능 종속 관계
-
-<하나 이상의 성능이 서로 종속적일 경우 연관관계를 기술한다.>
+	N/A
 
 5.5.기타 성능 요구사항
 
-<메모리, 디스크공간 요구사항, DB 최대 rows와 같은 기타 성능 관련 요구사항을 기술한다. >
+Android Device Disk Size가 최소 500MB 이상 여유가 있을 때만 동작한다. (Temporary Image Buffer Check)
 
 < 메모리, 디스크공간 요구사항>
-5.5.1	Deep Flowers 어플리케이션의 사용 시 필요한 메모리는 300MB 필요하다.
-5.5.2	Deep Flowers 어플리케이션의 사용 디스크 공간은 300MB 정도로 예상하며, 스마트폰의 디스크 공간은 스마트폰기종의 기본사양만 충족하면 된다.
+	5.5.1	Deep Flowers 어플리케이션의 사용 시 필요한 메모리는 300MB 필요하다.
+	5.5.2	Deep Flowers 어플리케이션의 사용 디스크 공간은 300MB 정도로 예상하며, 스마트폰의 디스크 공간은 스마트폰기종의 기본사양만 충족하면 된다.
 
 <자원 사용률>
-5.5.3	스마트폰 메모리(전체 3GB 중 예비공간 392MB포함)를 300MB 이상 사용되지 않아야 한다.
-5.5.4	Deep Flowers 어플리케이션을 실행만 해 놓은 경우, CPU 사용량은 0MB, RAM 은 200MB 이하로 사용되어야 한다.(권장사용량 : 160MB)
-5.5.5	Deep Flowers 어플리케이션을 실행하고, 절전모드를 실행하면 RAM은 100MB 미만으로 사용되어야한다. (권장 사용량 : 11MB~90MB)
+	5.5.3	스마트폰 메모리(전체 3GB 중 예비공간 392MB포함)를 300MB 이상 사용되지 않아야 한다.
+	5.5.4	Deep Flowers 어플리케이션을 실행만 해 놓은 경우, CPU 사용량은 0MB, RAM 은 200MB 이하로 사용되어야 한다.(권장사용량 : 160MB)
+	5.5.5	Deep Flowers 어플리케이션을 실행하고, 절전모드를 실행하면 RAM은 100MB 미만으로 사용되어야한다. (권장 사용량 : 11MB~90MB)
 
 
 ## 6.기능 이외 요구사항
@@ -369,8 +350,10 @@ RAM(Random Access Memory) : 3GB
 	SQLite for Local DB (Android Machine)
 
 6.5.비즈니스 규칙
+	N/A
 
 6.6.설계와 구현 제한사항
+	N/A
 
 6.6.1.표준준수
 	IDE(개발툴은 Android Studio 최신 버전으로 제한) 
@@ -443,9 +426,9 @@ User Interface Design 은 별도 문서로 작성함.
 	7.4.1. 꽃이름 알기 버튼을 누르면 휴대폰의 카메라 기능을 실행함.
 		7.4.1.1. MDM 같은 보안 프로그램이 카메라 기능 실행을 방해하면 경고메시지 출력 후 App 종료함.
 		7.4.1.2. 카메라의 초점이 맞으면 자동으로 사진을 촬영하고 앨범에 집어 넣음.
-		7.4.1.3. 촬영한 꽃사진을 Deep Flowers Tensor Flow 엔진에 입력하여 꽃이름을 출력함. (정확도 표시)
+		7.4.1.3. 촬영한 꽃사진을 Deep Flowers 엔진에 입력하여 꽃이름을 출력함. (정확도 표시)
 			7.4.1.3.1. 꽃이름을 알 수가 없으면 Unknown(알수없음) 표시.
-			7.4.1.3.2. Admin Mode 일 경우 꽃이름 입력 기능을 표시하고 해당 꽃의 이름을 입력하고 저장함. (Tensor Flow 학습시킴)
+			7.4.1.3.2. Admin Mode 일 경우 꽃이름 입력 기능을 표시하고 해당 꽃의 이름을 입력하고 저장함. (Deep Learning)
 
 ## 8.변경관리 프로세스
 
@@ -453,15 +436,14 @@ User Interface Design 은 별도 문서로 작성함.
 8.2. 변경승인자(연구회 리더)는 해당 내용을 Merge할지 Reject할지를 결정한다.
 
 ## 9.최종 승인자
-N/A
+연구회원 전원	
 
 ## 10. 참고문헌
 
 Google Tensorflow
 GitHub
 Google Android 
+AWS, Azure, Google Cloud Vision API 
 
-## 부록A: (용어)
-N/A
 
 
