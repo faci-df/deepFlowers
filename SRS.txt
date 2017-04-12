@@ -358,6 +358,8 @@ RAM(Random Access Memory) : 3GB
 
 6.3.4.신뢰성
 	꽃이름 정확도가 50% 이하인 경우 꽃이름 검색대상에서 제외하고 Not Available 문구 표시
+	충분히 머신러닝이 되지 않은 식물종류의 경우 정확도가 10% 이하가 나올 가능성이 있다. 이런경우 output으로 비슷한 꽃의 종류를 보여주고 매칭확률을 
+	함께 display한다
 
 6.3.5.나머지 특성(Remaining Attributes)
 	N/A
