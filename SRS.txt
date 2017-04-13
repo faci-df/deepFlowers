@@ -180,8 +180,8 @@ OS : Linux(Ubuntu)
 - TensorFlow
 OS : Ubuntu
 Builder : Bazel
-Python
-Tensor Flow
+language : Python
+Open Source : Tensor Flow
 CUDA
 CUDNN
 
