@@ -196,7 +196,7 @@ Android Device ( Example: Samsung Galaxy S7)
 
 3.5.2.소프트웨어 환경
 
-Android Studio Emulator
+Android Studio Emulator 또는 Real Device (Android 단말기)
 
 3.6.형상관리
 
@@ -439,7 +439,7 @@ User Interface Design 은 별도 문서로 작성함.
 
 Google Tensorflow
 GitHub
-Google Android 
+Google Android (https://developer.android.com/develop/index.html)
 AWS, Azure, Google Cloud Vision API 
 
 
