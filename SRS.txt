@@ -439,7 +439,9 @@ User Interface Design 은 별도 문서로 작성함.
 
 Google Tensorflow
 GitHub
-Google Android (https://developer.android.com/develop/index.html)
+Google Android 
+ - https://developer.android.com/develop/index.html (개발)
+ - https://developer.android.com/design/index.html (화면 디자인)
 AWS, Azure, Google Cloud Vision API 
 
 
