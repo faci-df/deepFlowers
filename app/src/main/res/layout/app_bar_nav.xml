@@ -15,12 +15,25 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/mainColor"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_nav"
-        android:layout_width="match_parent" />
+        android:layout_width="match_parent"
+        android:id="@+id/include2" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:clickable="true"
+        app:backgroundTint="#ff5d22"
+        app:fabSize="normal"
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="bottom|right"
+        app:srcCompat="@drawable/ic_menu_camera" />
 
 </android.support.design.widget.CoordinatorLayout>
