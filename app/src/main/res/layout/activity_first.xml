@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context="io.deepflowers.getflowername.FirstActivity">
 
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="107dp"
+        android:layout_height="169dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/web_hi_res_512"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <TextView
+        android:id="@+id/logoText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Deep Flowers ^^"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.383" />
 </android.support.constraint.ConstraintLayout>
