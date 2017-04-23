@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|center_horizontal"
         android:clickable="true"
-        app:backgroundTint="#ff5d22"
+        app:backgroundTint="@color/mainColor"
         app:fabSize="normal"
         app:layout_anchor="@+id/include2"
         app:layout_anchorGravity="bottom|right"
