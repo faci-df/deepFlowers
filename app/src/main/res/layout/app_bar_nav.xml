@@ -34,6 +34,7 @@
         app:fabSize="normal"
         app:layout_anchor="@+id/include2"
         app:layout_anchorGravity="bottom|right"
+        style="@style/floating_action_button"
         app:srcCompat="@drawable/ic_menu_camera" />
 
 </android.support.design.widget.CoordinatorLayout>
